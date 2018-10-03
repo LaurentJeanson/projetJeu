@@ -9,6 +9,9 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField]private int scene;
     [SerializeField]private Text loadingText;
+    [SerializeField]private Image text1;
+    [SerializeField] private Image text2;
+    private float loadTime = 5.0f;
 
 
     // Updates once per frame
@@ -37,8 +40,16 @@ public class SceneLoader : MonoBehaviour
             // ...then pulse the transparency of the loading text to let the player know that the computer is still working.
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 
+            text1.fillAmount -= 1.0f / loadTime * Time.deltaTime;
+            text2.fillAmount += 1.0f / loadTime * Time.deltaTime;
         }
 
+    }
+
+    IEnumerator ChangerText()
+    {
+
+        yield return null;
     }
 
 
@@ -48,7 +59,7 @@ public class SceneLoader : MonoBehaviour
 
         // This line waits for 3 seconds before executing the next line in the coroutine.
         // This line is only necessary for this demo. The scenes are so simple that they load too fast to read the "Loading..." text.
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
 
         // Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
         AsyncOperation async = Application.LoadLevelAsync(scene);

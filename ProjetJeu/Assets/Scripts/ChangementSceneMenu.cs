@@ -22,10 +22,10 @@ public class ChangementSceneMenu : MonoBehaviour {
 
     //Lorsque le joueur aura cliqué sur le bouton JOUER, il le ramenera au jeu
 
-    /*public void allerJeu()
+    public void allerJeu()
     {
-        SceneManager.LoadScene("sampleScene");
-    }*/
+        SceneManager.LoadScene("SampleScene");
+    }
 
     public void allerJeuInstructions()
     {

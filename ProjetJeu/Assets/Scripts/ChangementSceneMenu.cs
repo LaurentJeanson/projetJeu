@@ -24,7 +24,7 @@ public class ChangementSceneMenu : MonoBehaviour {
 
     public void allerJeu()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SceneJeu");
     }
 
     //Lorsque le joueur aura cliqué sur le bouton INSTRUCTIONS, il le ramenera au instructions du jeu

@@ -2,30 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeplacementPerso : MonoBehaviour {
-
-    public float vitesse;
+public class DeplacementPerso : MonoBehaviour
+{
 
     private Rigidbody rb;
     private Animator anim;
 
-	// Use this for initialization
-	void Start () {
+    public float vitesseDeplacement;
+
+    // Use this for initialization
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        float deplaceHorizontal = Input.GetAxis("Horizontal");
-        float deplaceVertical = Input.GetAxis("Vertical");
-        float mouseInput = Input.GetAxis("Mouse X");
+    }
 
-        Vector3 deplacement = new Vector3(deplaceHorizontal, 0f, deplaceVertical);
-        Vector3 direction = new Vector3(0, mouseInput, 0);
+    // Update is called once per frame
+    void Update()
+    {
+        float deplacementHorizontal = Input.GetAxis("Horizontal");
+        float deplacementVertical = Input.GetAxis("Vertical");
 
-        rb.AddForce(deplacement * vitesse);
-        transform.Rotate(direction);
+        //gameObject.GetComponent<Rigidbody>().velocity
+        rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement;
 
+        if (rb.velocity.magnitude > 0)
+        {
+            //gameObject.GetComponent<Animator>().setBool(...);
+            anim.SetBool("Marche", true);
+        }
+        else //if(rb.velocity.magnitude == 0)
+        {
+            anim.SetBool("Marche", false);
+        }
+
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit infoCollisionPerso;
+
+        if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollisionPerso, 5000))
+        {
+            Vector3 pointARegarder = infoCollisionPerso.point;//(x, y, z)
+            /*gameObject.*/
+            transform.LookAt(pointARegarder);
+            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+        }
     }
 }

@@ -24,7 +24,7 @@ public class DeplacementPerso : MonoBehaviour
         float deplacementVertical = Input.GetAxis("Vertical");
 
         //gameObject.GetComponent<Rigidbody>().velocity
-        rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement;
+        rb.velocity = new Vector3(-deplacementVertical, 0, deplacementHorizontal).normalized * vitesseDeplacement;
 
         if (rb.velocity.magnitude > 0)
         {

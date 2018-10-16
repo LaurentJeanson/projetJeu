@@ -7,6 +7,7 @@ public class DeplacementPerso : MonoBehaviour
 
     private Rigidbody rb;
     private Animator anim;
+    private bool court = false;
 
     public float vitesseDeplacement;
 
@@ -23,17 +24,33 @@ public class DeplacementPerso : MonoBehaviour
         float deplacementHorizontal = Input.GetAxis("Horizontal");
         float deplacementVertical = Input.GetAxis("Vertical");
 
-        //gameObject.GetComponent<Rigidbody>().velocity
-        rb.velocity = new Vector3(-deplacementVertical, 0, deplacementHorizontal).normalized * vitesseDeplacement;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement * 2f;
+            court = true;
+        }
+        else
+        {
+            //gameObject.GetComponent<Rigidbody>().velocity
+            rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement;
+            court = false;
+        }
 
-        if (rb.velocity.magnitude > 0)
+        if (rb.velocity.magnitude > 0 && !court)
         {
             //gameObject.GetComponent<Animator>().setBool(...);
             anim.SetBool("Marche", true);
+            anim.SetBool("Court", false);
+        }
+        else if (rb.velocity.magnitude > 0 && court)
+        {
+            anim.SetBool("Marche", false);
+            anim.SetBool("Court", true);
         }
         else //if(rb.velocity.magnitude == 0)
         {
             anim.SetBool("Marche", false);
+            anim.SetBool("Court", false);
         }
 
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);

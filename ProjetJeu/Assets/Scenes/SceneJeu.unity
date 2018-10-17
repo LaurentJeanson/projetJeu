@@ -2381,7 +2381,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.65882355, g: 1, b: 0.8392157, a: 1}
+  m_Color: {r: 0.45122823, g: 0.5660378, b: 0.51193213, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -2749,7 +2749,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4725820488218090, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 277.9
+      value: 311.3
       objectReference: {fileID: 0}
     - target: {fileID: 4725820488218090, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2757,7 +2757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725820488218090, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 109.6
+      value: 183.8
       objectReference: {fileID: 0}
     - target: {fileID: 4725820488218090, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2794,7 +2794,7 @@ Prefab:
     - target: {fileID: 114153360139954366, guid: b9fa87e814a83d141adb88cf7c5450ac,
         type: 2}
       propertyPath: vitesseDeplacement
-      value: 15
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
@@ -3418,7 +3418,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.754717, g: 0.6140931, b: 0.5660378, a: 1}
+  m_Color: {r: 0.6415094, g: 0.56428367, b: 0.5355998, a: 1}
   m_Intensity: 2.25
   m_Range: 10
   m_SpotAngle: 30

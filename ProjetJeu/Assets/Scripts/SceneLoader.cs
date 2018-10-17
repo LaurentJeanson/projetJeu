@@ -34,7 +34,7 @@ public class SceneLoader : MonoBehaviour
         if (logoAffiche == true)
         {
             // If the player has pressed the space bar and a new scene is not loading yet...
-            if (Input.GetKeyUp(KeyCode.Space) && loadScene == false)
+            if (loadScene == false)
             {
 
                 // ...set the loadScene boolean to true to prevent loading a new scene more than once...
@@ -120,6 +120,7 @@ public class SceneLoader : MonoBehaviour
     private void SetColorImage(ref float alpha, fadeDirection fadeDirection)
     {
         fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
+        text2.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
         alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == fadeDirection.Out) ? -1 : 1);
     }
 }

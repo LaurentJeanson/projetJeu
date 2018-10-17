@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private Image logo;
     private float loadTime = 5.0f;
     private Color couleur;
+
+    public RawImage fadeOutUIImage;
+    public float fadeSpeed = 0.8f;
+    public enum fadeDirection
+    {
+        In, //Alpha = 1
+        Out // Alpha = 0
+    }
 
 
     // Updates once per frame
@@ -35,7 +44,7 @@ public class SceneLoader : MonoBehaviour
                 loadingText.text = "Loading...";
 
                 // ...and start a coroutine that will load the desired scene.
-                StartCoroutine(LoadNewScene());
+                StartCoroutine(FadeAndLoadScene(fadeDirection.Out, scene));
             }
             // If the new scene has started loading...
             if (loadScene == true)
@@ -77,30 +86,40 @@ public class SceneLoader : MonoBehaviour
         text2.gameObject.SetActive(true);
     }
 
-    IEnumerator ChangerText()
+    public IEnumerator FadeAndLoadScene(fadeDirection fadeDirection, int scene)
     {
-
-        yield return null;
+        yield return new WaitForSeconds(5f);
+        yield return Fade(fadeDirection);
+        SceneManager.LoadScene(scene);
     }
 
-
-    // The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.
-    IEnumerator LoadNewScene()
+    private IEnumerator Fade(fadeDirection fadeDirection)
     {
-
-        // This line waits for 3 seconds before executing the next line in the coroutine.
-        // This line is only necessary for this demo. The scenes are so simple that they load too fast to read the "Loading..." text.
-        yield return new WaitForSeconds(6);
-
-        // Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
-        AsyncOperation async = Application.LoadLevelAsync(scene);
-
-        // While the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
-        while (!async.isDone)
+        float alpha = (fadeDirection == fadeDirection.Out) ? 1 : 0;
+        float fadeEndValue = (fadeDirection == fadeDirection.Out) ? 0 : 1;
+        if (fadeDirection == fadeDirection.Out)
         {
-            yield return null;
+            while (alpha >= fadeEndValue)
+            {
+                SetColorImage(ref alpha, fadeDirection);
+                yield return null;
+            }
+            fadeOutUIImage.enabled = false;
         }
-
+        else
+        {
+            fadeOutUIImage.enabled = true;
+            while (alpha <= fadeEndValue)
+            {
+                SetColorImage(ref alpha, fadeDirection);
+                yield return null;
+            }
+        }
     }
 
+    private void SetColorImage(ref float alpha, fadeDirection fadeDirection)
+    {
+        fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
+        alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == fadeDirection.Out) ? -1 : 1);
+    }
 }

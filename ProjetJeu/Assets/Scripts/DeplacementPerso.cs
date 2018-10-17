@@ -19,22 +19,40 @@ public class DeplacementPerso : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void LateUpdate()
+    {
+        rb.AddForce(new Vector3(0, -600, 0));
+    }
+
+    void FixedUpdate()
     {
         float deplacementHorizontal = Input.GetAxis("Horizontal");
         float deplacementVertical = Input.GetAxis("Vertical");
 
+        float vitesseHorizontal = deplacementHorizontal * vitesseDeplacement;
+        float vitesseVertical = deplacementVertical * vitesseDeplacement;
+
+        //print(rb.velocity.y);
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement * 2f;
+            
+            rb.velocity = new Vector3(vitesseHorizontal, 0, vitesseVertical).normalized * 20;
             court = true;
         }
         else
         {
             //gameObject.GetComponent<Rigidbody>().velocity
-            rb.velocity = new Vector3(deplacementHorizontal, 0, deplacementVertical).normalized * vitesseDeplacement;
+            //rb.AddForce(new Vector3(0, -300, 0));
+            rb.velocity = new Vector3(vitesseHorizontal, 0, vitesseVertical).normalized * 10;
             court = false;
         }
+
+        print(rb.velocity.x);
+        //rb.AddForce(0, -10, 0, ForceMode.Impulse);
+        //rb.velocity = new Vector3(rb.velocity.x, -10, rb.velocity.z);
+        print(rb.velocity.x);
 
         if (rb.velocity.magnitude > 0 && !court)
         {

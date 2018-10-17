@@ -2110,7 +2110,12 @@ Prefab:
     - target: {fileID: 114863381368108102, guid: c765babaab41bda41bb0bcee8148f9b7,
         type: 2}
       propertyPath: Distance.z
-      value: -20
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114863381368108102, guid: c765babaab41bda41bb0bcee8148f9b7,
+        type: 2}
+      propertyPath: Distance.x
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c765babaab41bda41bb0bcee8148f9b7, type: 2}
@@ -2922,7 +2927,7 @@ Prefab:
     - target: {fileID: 54472858720008830, guid: b9fa87e814a83d141adb88cf7c5450ac,
         type: 2}
       propertyPath: m_Mass
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 54472858720008830, guid: b9fa87e814a83d141adb88cf7c5450ac,
         type: 2}
@@ -3683,7 +3688,7 @@ GameObject:
   - component: {fileID: 268091701}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294

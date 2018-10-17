@@ -22,7 +22,7 @@ public class DeplacementPerso : MonoBehaviour
 
     private void LateUpdate()
     {
-        rb.AddForce(new Vector3(0, -600, 0));
+        //rb.AddForce(new Vector3(0, -1000, 0));
     }
 
     void FixedUpdate()
@@ -30,8 +30,8 @@ public class DeplacementPerso : MonoBehaviour
         float deplacementHorizontal = Input.GetAxis("Horizontal");
         float deplacementVertical = Input.GetAxis("Vertical");
 
-        float vitesseHorizontal = deplacementHorizontal * vitesseDeplacement;
-        float vitesseVertical = deplacementVertical * vitesseDeplacement;
+        float vitesseHorizontal = -deplacementVertical * vitesseDeplacement;
+        float vitesseVertical = deplacementHorizontal * vitesseDeplacement;
 
         //print(rb.velocity.y);
 
@@ -48,11 +48,6 @@ public class DeplacementPerso : MonoBehaviour
             rb.velocity = new Vector3(vitesseHorizontal, 0, vitesseVertical).normalized * 10;
             court = false;
         }
-
-        print(rb.velocity.x);
-        //rb.AddForce(0, -10, 0, ForceMode.Impulse);
-        //rb.velocity = new Vector3(rb.velocity.x, -10, rb.velocity.z);
-        print(rb.velocity.x);
 
         if (rb.velocity.magnitude > 0 && !court)
         {
@@ -81,6 +76,16 @@ public class DeplacementPerso : MonoBehaviour
             /*gameObject.*/
             transform.LookAt(pointARegarder);
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+        }
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(gameObject.transform.position, Vector3.down, out hit))
+        {
+            if (hit.distance > 1)
+            {
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - hit.distance, gameObject.transform.position.z), 12 * Time.deltaTime);
+            }
         }
     }
 }

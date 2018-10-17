@@ -121,6 +121,7 @@ public class SceneLoader : MonoBehaviour
     {
         fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
         text2.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
+        loadingText.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
         alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == fadeDirection.Out) ? -1 : 1);
     }
 }

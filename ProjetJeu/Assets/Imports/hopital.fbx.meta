@@ -1,0 +1,599 @@
+fileFormatVersion: 2
+guid: 7ee626b53f0100a4b8ebed6c0c2dbcbd
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: areaLight1
+    100002: group1
+    100004: group2
+    100006: group3
+    100008: group4
+    100010: //RootNode
+    100012: pointLight1
+    100014: SM_Bed_A2
+    100016: SM_Bed_B1
+    100018: SM_Book_01
+    100020: SM_Chairs_A1
+    100022: SM_Chairs_A2
+    100024: SM_Chairs_B1
+    100026: SM_Chairs_B3
+    100028: SM_Chairs_C1
+    100030: SM_Chairs_D1
+    100032: SM_Couch_A1
+    100034: SM_Couch_A2
+    100036: SM_Cup_01
+    100038: SM_Door_A3
+    100040: SM_Door_A4
+    100042: SM_Door_A5
+    100044: SM_Door_B2_Left:SM_Door_B2_Left
+    100046: SM_Door_B2_Right:SM_Door_B2_Right
+    100048: SM_DoorFrame_200
+    100050: SM_DoorFrame_602:SM_DoorFrame_600
+    100052: SM_DoorFrame_603
+    100054: SM_DoorFrame_C_401:SM_DoorFrame_C_400
+    100056: SM_DropCounter_A1
+    100058: SM_Floor_180
+    100060: SM_Floor_181
+    100062: SM_Floor_182
+    100064: SM_Floor_183
+    100066: SM_Floor_184
+    100068: SM_Floor_185
+    100070: SM_Floor_186
+    100072: SM_Floor_186 1
+    100074: SM_Floor_186 2
+    100076: SM_Floor_186 3
+    100078: SM_Floor_187
+    100080: SM_Floor_187 1
+    100082: SM_Floor_187 2
+    100084: SM_Floor_187 3
+    100086: SM_Floor_188
+    100088: SM_Floor_189
+    100090: SM_Floor_190
+    100092: SM_Floor_191
+    100094: SM_Floor_192
+    100096: SM_Floor_193
+    100098: SM_Floor_194
+    100100: SM_Floor_195
+    100102: SM_Floor_196
+    100104: SM_Floor_197
+    100106: SM_Flower_A2
+    100108: SM_Flower_A3
+    100110: SM_Folding_Screen_B1
+    100112: SM_Folding_Screen_B2
+    100114: SM_Lamp_A1
+    100116: SM_Lamp_A2
+    100118: SM_Lamp_A3
+    100120: SM_Lamp_A4
+    100122: SM_Lamp_A5
+    100124: SM_Lamp_A6
+    100126: SM_ReceptionTable_A:SM_ReceptionTable_A
+    100128: SM_Shelf_A1
+    100130: SM_Shelf_A4
+    100132: SM_Shelf_B3
+    100134: SM_Sign_A3
+    100136: SM_Sign_A5
+    100138: SM_Table_A1
+    100140: SM_Table_A2
+    100142: SM_Table_A3
+    100144: SM_Table_A3_Empty
+    100146: SM_Wall_200:SM_Wall_200
+    100148: SM_Wall_600
+    100150: SM_Wall_800:SM_Wall_800
+    100152: SM_Wall_801:SM_Wall_600
+    100154: SM_Wall_802
+    100156: SM_Wall_803
+    100158: SM_Wall_805
+    100160: SM_Wall_806
+    100162: SM_Wall_807
+    100164: SM_Wall_808
+    100166: SM_Wall_809
+    100168: SM_Wall_810
+    100170: SM_Wall_Window_A_600:SM_Wall_Window_A_600
+    100172: SM_Wall_Window_A_800:SM_Wall_Window_A_800
+    100174: SM_Wall_Window_B_400:SM_Wall_Window_B_400
+    100176: SM_Wall_Window_B_600:SM_Wall_Window_B_600
+    100178: SM_Wall_Window_B_601:SM_Wall_Window_B_601
+    100180: SM_Wall_Window_B_602
+    100182: SM_Wall_Window_B_603
+    100184: spotLight1
+    100186: transform1
+    100188: transform2
+    100190: transform3
+    100192: transform4
+    100194: transform5
+    100196: transform6
+    400000: areaLight1
+    400002: group1
+    400004: group2
+    400006: group3
+    400008: group4
+    400010: //RootNode
+    400012: pointLight1
+    400014: SM_Bed_A2
+    400016: SM_Bed_B1
+    400018: SM_Book_01
+    400020: SM_Chairs_A1
+    400022: SM_Chairs_A2
+    400024: SM_Chairs_B1
+    400026: SM_Chairs_B3
+    400028: SM_Chairs_C1
+    400030: SM_Chairs_D1
+    400032: SM_Couch_A1
+    400034: SM_Couch_A2
+    400036: SM_Cup_01
+    400038: SM_Door_A3
+    400040: SM_Door_A4
+    400042: SM_Door_A5
+    400044: SM_Door_B2_Left:SM_Door_B2_Left
+    400046: SM_Door_B2_Right:SM_Door_B2_Right
+    400048: SM_DoorFrame_200
+    400050: SM_DoorFrame_602:SM_DoorFrame_600
+    400052: SM_DoorFrame_603
+    400054: SM_DoorFrame_C_401:SM_DoorFrame_C_400
+    400056: SM_DropCounter_A1
+    400058: SM_Floor_180
+    400060: SM_Floor_181
+    400062: SM_Floor_182
+    400064: SM_Floor_183
+    400066: SM_Floor_184
+    400068: SM_Floor_185
+    400070: SM_Floor_186
+    400072: SM_Floor_186 1
+    400074: SM_Floor_186 2
+    400076: SM_Floor_186 3
+    400078: SM_Floor_187
+    400080: SM_Floor_187 1
+    400082: SM_Floor_187 2
+    400084: SM_Floor_187 3
+    400086: SM_Floor_188
+    400088: SM_Floor_189
+    400090: SM_Floor_190
+    400092: SM_Floor_191
+    400094: SM_Floor_192
+    400096: SM_Floor_193
+    400098: SM_Floor_194
+    400100: SM_Floor_195
+    400102: SM_Floor_196
+    400104: SM_Floor_197
+    400106: SM_Flower_A2
+    400108: SM_Flower_A3
+    400110: SM_Folding_Screen_B1
+    400112: SM_Folding_Screen_B2
+    400114: SM_Lamp_A1
+    400116: SM_Lamp_A2
+    400118: SM_Lamp_A3
+    400120: SM_Lamp_A4
+    400122: SM_Lamp_A5
+    400124: SM_Lamp_A6
+    400126: SM_ReceptionTable_A:SM_ReceptionTable_A
+    400128: SM_Shelf_A1
+    400130: SM_Shelf_A4
+    400132: SM_Shelf_B3
+    400134: SM_Sign_A3
+    400136: SM_Sign_A5
+    400138: SM_Table_A1
+    400140: SM_Table_A2
+    400142: SM_Table_A3
+    400144: SM_Table_A3_Empty
+    400146: SM_Wall_200:SM_Wall_200
+    400148: SM_Wall_600
+    400150: SM_Wall_800:SM_Wall_800
+    400152: SM_Wall_801:SM_Wall_600
+    400154: SM_Wall_802
+    400156: SM_Wall_803
+    400158: SM_Wall_805
+    400160: SM_Wall_806
+    400162: SM_Wall_807
+    400164: SM_Wall_808
+    400166: SM_Wall_809
+    400168: SM_Wall_810
+    400170: SM_Wall_Window_A_600:SM_Wall_Window_A_600
+    400172: SM_Wall_Window_A_800:SM_Wall_Window_A_800
+    400174: SM_Wall_Window_B_400:SM_Wall_Window_B_400
+    400176: SM_Wall_Window_B_600:SM_Wall_Window_B_600
+    400178: SM_Wall_Window_B_601:SM_Wall_Window_B_601
+    400180: SM_Wall_Window_B_602
+    400182: SM_Wall_Window_B_603
+    400184: spotLight1
+    400186: transform1
+    400188: transform2
+    400190: transform3
+    400192: transform4
+    400194: transform5
+    400196: transform6
+    2100000: 02 - Default
+    2100002: SM_Wall_Corner_B_200_Side_1
+    2100004: Floor1
+    2100006: Floor
+    2100008: SM_Wall_801_Outside
+    2100010: SM_Wall_800_Outside
+    2100012: SM_Wall_200_Outside
+    2100014: blinn1
+    2100016: blinn2
+    2100018: lumieres1
+    2100020: 02 - Default11
+    2100022: 02 - Default19
+    2300000: SM_Bed_A2
+    2300002: SM_Bed_B1
+    2300004: SM_Book_01
+    2300006: SM_Chairs_A1
+    2300008: SM_Chairs_A2
+    2300010: SM_Chairs_B1
+    2300012: SM_Chairs_B3
+    2300014: SM_Chairs_C1
+    2300016: SM_Chairs_D1
+    2300018: SM_Couch_A1
+    2300020: SM_Couch_A2
+    2300022: SM_Cup_01
+    2300024: SM_Door_A3
+    2300026: SM_Door_A4
+    2300028: SM_Door_A5
+    2300030: SM_Door_B2_Left:SM_Door_B2_Left
+    2300032: SM_Door_B2_Right:SM_Door_B2_Right
+    2300034: SM_DoorFrame_200
+    2300036: SM_DoorFrame_602:SM_DoorFrame_600
+    2300038: SM_DoorFrame_603
+    2300040: SM_DoorFrame_C_401:SM_DoorFrame_C_400
+    2300042: SM_DropCounter_A1
+    2300044: SM_Floor_186
+    2300046: SM_Floor_186 1
+    2300048: SM_Floor_186 2
+    2300050: SM_Floor_186 3
+    2300052: SM_Floor_187
+    2300054: SM_Floor_187 1
+    2300056: SM_Floor_187 2
+    2300058: SM_Floor_187 3
+    2300060: SM_Floor_188
+    2300062: SM_Floor_189
+    2300064: SM_Floor_190
+    2300066: SM_Floor_191
+    2300068: SM_Floor_192
+    2300070: SM_Floor_193
+    2300072: SM_Floor_194
+    2300074: SM_Floor_195
+    2300076: SM_Floor_196
+    2300078: SM_Floor_197
+    2300080: SM_Flower_A2
+    2300082: SM_Flower_A3
+    2300084: SM_Folding_Screen_B1
+    2300086: SM_Folding_Screen_B2
+    2300088: SM_Lamp_A1
+    2300090: SM_Lamp_A2
+    2300092: SM_Lamp_A3
+    2300094: SM_Lamp_A4
+    2300096: SM_Lamp_A5
+    2300098: SM_Lamp_A6
+    2300100: SM_ReceptionTable_A:SM_ReceptionTable_A
+    2300102: SM_Shelf_A1
+    2300104: SM_Shelf_A4
+    2300106: SM_Shelf_B3
+    2300108: SM_Sign_A3
+    2300110: SM_Sign_A5
+    2300112: SM_Table_A1
+    2300114: SM_Table_A2
+    2300116: SM_Table_A3
+    2300118: SM_Table_A3_Empty
+    2300120: SM_Wall_200:SM_Wall_200
+    2300122: SM_Wall_600
+    2300124: SM_Wall_800:SM_Wall_800
+    2300126: SM_Wall_801:SM_Wall_600
+    2300128: SM_Wall_802
+    2300130: SM_Wall_803
+    2300132: SM_Wall_805
+    2300134: SM_Wall_806
+    2300136: SM_Wall_807
+    2300138: SM_Wall_808
+    2300140: SM_Wall_809
+    2300142: SM_Wall_810
+    2300144: SM_Wall_Window_A_600:SM_Wall_Window_A_600
+    2300146: SM_Wall_Window_A_800:SM_Wall_Window_A_800
+    2300148: SM_Wall_Window_B_400:SM_Wall_Window_B_400
+    2300150: SM_Wall_Window_B_600:SM_Wall_Window_B_600
+    2300152: SM_Wall_Window_B_601:SM_Wall_Window_B_601
+    2300154: SM_Wall_Window_B_602
+    2300156: SM_Wall_Window_B_603
+    3300000: SM_Bed_A2
+    3300002: SM_Bed_B1
+    3300004: SM_Book_01
+    3300006: SM_Chairs_A1
+    3300008: SM_Chairs_A2
+    3300010: SM_Chairs_B1
+    3300012: SM_Chairs_B3
+    3300014: SM_Chairs_C1
+    3300016: SM_Chairs_D1
+    3300018: SM_Couch_A1
+    3300020: SM_Couch_A2
+    3300022: SM_Cup_01
+    3300024: SM_Door_A3
+    3300026: SM_Door_A4
+    3300028: SM_Door_A5
+    3300030: SM_Door_B2_Left:SM_Door_B2_Left
+    3300032: SM_Door_B2_Right:SM_Door_B2_Right
+    3300034: SM_DoorFrame_200
+    3300036: SM_DoorFrame_602:SM_DoorFrame_600
+    3300038: SM_DoorFrame_603
+    3300040: SM_DoorFrame_C_401:SM_DoorFrame_C_400
+    3300042: SM_DropCounter_A1
+    3300044: SM_Floor_186
+    3300046: SM_Floor_186 1
+    3300048: SM_Floor_186 2
+    3300050: SM_Floor_186 3
+    3300052: SM_Floor_187
+    3300054: SM_Floor_187 1
+    3300056: SM_Floor_187 2
+    3300058: SM_Floor_187 3
+    3300060: SM_Floor_188
+    3300062: SM_Floor_189
+    3300064: SM_Floor_190
+    3300066: SM_Floor_191
+    3300068: SM_Floor_192
+    3300070: SM_Floor_193
+    3300072: SM_Floor_194
+    3300074: SM_Floor_195
+    3300076: SM_Floor_196
+    3300078: SM_Floor_197
+    3300080: SM_Flower_A2
+    3300082: SM_Flower_A3
+    3300084: SM_Folding_Screen_B1
+    3300086: SM_Folding_Screen_B2
+    3300088: SM_Lamp_A1
+    3300090: SM_Lamp_A2
+    3300092: SM_Lamp_A3
+    3300094: SM_Lamp_A4
+    3300096: SM_Lamp_A5
+    3300098: SM_Lamp_A6
+    3300100: SM_ReceptionTable_A:SM_ReceptionTable_A
+    3300102: SM_Shelf_A1
+    3300104: SM_Shelf_A4
+    3300106: SM_Shelf_B3
+    3300108: SM_Sign_A3
+    3300110: SM_Sign_A5
+    3300112: SM_Table_A1
+    3300114: SM_Table_A2
+    3300116: SM_Table_A3
+    3300118: SM_Table_A3_Empty
+    3300120: SM_Wall_200:SM_Wall_200
+    3300122: SM_Wall_600
+    3300124: SM_Wall_800:SM_Wall_800
+    3300126: SM_Wall_801:SM_Wall_600
+    3300128: SM_Wall_802
+    3300130: SM_Wall_803
+    3300132: SM_Wall_805
+    3300134: SM_Wall_806
+    3300136: SM_Wall_807
+    3300138: SM_Wall_808
+    3300140: SM_Wall_809
+    3300142: SM_Wall_810
+    3300144: SM_Wall_Window_A_600:SM_Wall_Window_A_600
+    3300146: SM_Wall_Window_A_800:SM_Wall_Window_A_800
+    3300148: SM_Wall_Window_B_400:SM_Wall_Window_B_400
+    3300150: SM_Wall_Window_B_600:SM_Wall_Window_B_600
+    3300152: SM_Wall_Window_B_601:SM_Wall_Window_B_601
+    3300154: SM_Wall_Window_B_602
+    3300156: SM_Wall_Window_B_603
+    4300000: SM_Chairs_A1
+    4300002: SM_Wall_600
+    4300004: SM_DoorFrame_200
+    4300006: SM_Floor_186
+    4300008: SM_Floor_187
+    4300010: SM_Floor_188
+    4300012: SM_Floor_189
+    4300014: SM_Floor_190
+    4300016: SM_Floor_191
+    4300018: SM_Floor_186
+    4300020: SM_Floor_187
+    4300022: SM_Floor_194
+    4300024: SM_Floor_195
+    4300026: SM_Floor_186
+    4300028: SM_Floor_187
+    4300030: SM_Floor_196
+    4300032: SM_Floor_197
+    4300034: SM_Floor_186
+    4300036: SM_Floor_187
+    4300038: SM_Floor_192
+    4300040: SM_Floor_193
+    4300042: SM_Wall_801:SM_Wall_600
+    4300044: SM_DoorFrame_602:SM_DoorFrame_600
+    4300046: SM_Wall_800:SM_Wall_800
+    4300048: SM_Wall_200:SM_Wall_200
+    4300050: SM_Wall_802
+    4300052: SM_Wall_803
+    4300054: SM_Wall_805
+    4300056: SM_ReceptionTable_A:SM_ReceptionTable_A
+    4300058: SM_Wall_Window_A_800:SM_Wall_Window_A_800
+    4300060: SM_Wall_806
+    4300062: SM_Wall_Window_A_600:SM_Wall_Window_A_600
+    4300064: SM_Wall_807
+    4300066: SM_Wall_Window_B_601:SM_Wall_Window_B_601
+    4300068: SM_Wall_Window_B_600:SM_Wall_Window_B_600
+    4300070: SM_Wall_Window_B_400:SM_Wall_Window_B_400
+    4300072: SM_Wall_Window_B_602
+    4300074: SM_Wall_Window_B_603
+    4300076: SM_Wall_808
+    4300078: SM_DoorFrame_C_401:SM_DoorFrame_C_400
+    4300080: SM_Wall_809
+    4300082: SM_Door_B2_Left:SM_Door_B2_Left
+    4300084: SM_Door_B2_Right:SM_Door_B2_Right
+    4300086: SM_Lamp_A1
+    4300088: SM_Lamp_A2
+    4300090: SM_Lamp_A3
+    4300092: SM_Sign_A3
+    4300094: SM_Couch_A2
+    4300096: SM_Table_A3_Empty
+    4300098: SM_Cup_01
+    4300100: SM_Book_01
+    4300102: SM_Shelf_A1
+    4300104: SM_Bed_B1
+    4300106: SM_Table_A1
+    4300108: SM_DropCounter_A1
+    4300110: SM_Sign_A5
+    4300112: SM_Chairs_D1
+    4300114: SM_Chairs_C1
+    4300116: SM_Chairs_B1
+    4300118: SM_Folding_Screen_B1
+    4300120: SM_Lamp_A4
+    4300122: SM_Lamp_A5
+    4300124: SM_Lamp_A6
+    4300126: SM_Bed_A2
+    4300128: SM_Folding_Screen_B2
+    4300130: SM_Chairs_B3
+    4300132: SM_Door_A3
+    4300134: SM_Door_A4
+    4300136: SM_Door_A5
+    4300138: SM_Chairs_A2
+    4300140: SM_Flower_A3
+    4300142: SM_Flower_A2
+    4300144: SM_Table_A3
+    4300146: SM_Table_A2
+    4300148: SM_Couch_A1
+    4300150: SM_Shelf_B3
+    4300152: SM_Shelf_A4
+    4300154: SM_DoorFrame_603
+    4300156: SM_Wall_810
+    9500000: //RootNode
+    10800000: pointLight1
+    10800002: spotLight1
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: f0646408884141742a87d08eee9269c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default11
+    second: {fileID: 2100000, guid: 625b88f582758e04a8c424fb2430322e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default19
+    second: {fileID: 2100000, guid: 7ac33d2634a8ce24a90cd73f2b5204c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 0809347d21de82a49ac6b40c2759d9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor1
+    second: {fileID: 2100000, guid: fa4a2086838128e4b94e246b922a6a76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SM_Wall_200_Outside
+    second: {fileID: 2100000, guid: aeb74088405a9fd499f7c8a7927b8a09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SM_Wall_800_Outside
+    second: {fileID: 2100000, guid: 02c5346d4186a914ba5a27d49db49310, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SM_Wall_801_Outside
+    second: {fileID: 2100000, guid: 593bacfc6c0c5ab45800f5e15e10b815, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SM_Wall_Corner_B_200_Side_1
+    second: {fileID: 2100000, guid: 83ff61ed59179654995483f08de043d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: 6f9477dcdda37c64087102e267714439, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn2
+    second: {fileID: 2100000, guid: 2710acd3594e11e4195ed1b6267e41e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lumieres1
+    second: {fileID: 2100000, guid: 539ec5c05036fd643885d48dd3cb2101, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

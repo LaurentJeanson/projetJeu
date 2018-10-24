@@ -70,7 +70,7 @@ public class DeplacementPerso : MonoBehaviour
 
         RaycastHit infoCollisionPerso;
 
-        if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollisionPerso, 5000))
+        if (Physics.Raycast(camRay.origin, camRay.direction, out infoCollisionPerso, 5000, LayerMask.GetMask("Plancher")))
         {
             Vector3 pointARegarder = infoCollisionPerso.point;//(x, y, z)
             /*gameObject.*/

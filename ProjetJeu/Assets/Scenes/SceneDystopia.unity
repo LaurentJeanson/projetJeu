@@ -1597,8 +1597,8 @@ GameObject:
   - component: {fileID: 139843523}
   m_Layer: 0
   m_Name: SpawnMarais
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6916,8 +6916,8 @@ GameObject:
   - component: {fileID: 568233037}
   m_Layer: 0
   m_Name: SpawnSatellite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12632,8 +12632,8 @@ GameObject:
   - component: {fileID: 1040857238}
   m_Layer: 0
   m_Name: SpawnCimetiere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -21717,8 +21717,8 @@ GameObject:
   - component: {fileID: 1744078138}
   m_Layer: 0
   m_Name: SpawnPlage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -23566,8 +23566,8 @@ GameObject:
   - component: {fileID: 1856313648}
   m_Layer: 0
   m_Name: SpawnFontaine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26424,8 +26424,8 @@ GameObject:
   - component: {fileID: 2036140513}
   m_Layer: 0
   m_Name: SpawnVillage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Respawn
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

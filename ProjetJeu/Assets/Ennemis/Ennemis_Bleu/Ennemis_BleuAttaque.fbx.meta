@@ -1,29 +1,44 @@
 fileFormatVersion: 2
-guid: 669be34ddd6667045b644fe504c24c9d
+guid: 3794a73b9a8f9eb4381bb02c9a4f2486
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: MonstrePrincipal
-    100004: Right_Eye
-    100006: Right_eye
+    100002: joint1
+    100004: joint2
+    100006: joint3
+    100008: joint4
+    100010: joint5
+    100012: joint6
+    100014: joint7
+    100016: locator1
+    100018: MonstreBleu
+    100020: MonstrePrincipal
+    100022: Right_Eye
+    100024: Right_eye
     400000: //RootNode
-    400002: MonstrePrincipal
-    400004: Right_Eye
-    400006: Right_eye
+    400002: joint1
+    400004: joint2
+    400006: joint3
+    400008: joint4
+    400010: joint5
+    400012: joint6
+    400014: joint7
+    400016: locator1
+    400018: MonstreBleu
+    400020: MonstrePrincipal
+    400022: Right_Eye
+    400024: Right_eye
     2100000: ContourJaune
     2100002: Noir_Yeux
-    2300000: MonstrePrincipal
-    2300002: Right_Eye
-    2300004: Right_eye
-    3300000: MonstrePrincipal
-    3300002: Right_Eye
-    3300004: Right_eye
     4300000: MonstrePrincipal
     4300002: Right_eye
     4300004: Right_Eye
-    7400000: Marche
+    7400000: Take 001
     9500000: //RootNode
+    13700000: MonstrePrincipal
+    13700002: Right_Eye
+    13700004: Right_eye
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -43,7 +58,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -51,39 +66,11 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Marche
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 40
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -103,7 +90,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.03
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

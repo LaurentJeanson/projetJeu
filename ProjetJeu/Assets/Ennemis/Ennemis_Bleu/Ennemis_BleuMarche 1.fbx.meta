@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 669be34ddd6667045b644fe504c24c9d
+guid: ca280bbaa84078c47bb33fd5314668da
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -83,7 +83,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 10
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -103,7 +103,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.03
+    previousCalculatedGlobalScale: 0.06
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

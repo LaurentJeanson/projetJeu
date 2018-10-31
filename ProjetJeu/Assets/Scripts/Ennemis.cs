@@ -16,5 +16,7 @@ public class Ennemis : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         navAgent.SetDestination(laCible.transform.position); //Permet le déplacement de l'ennemi vers la cible (personnage)
-	}
+
+
+    }
 }

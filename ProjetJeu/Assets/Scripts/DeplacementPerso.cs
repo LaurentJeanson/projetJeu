@@ -8,6 +8,7 @@ public class DeplacementPerso : MonoBehaviour
     private Rigidbody rb;
     private Animator anim;
     private bool court = false;
+    private bool reculons = false;
 
     public float vitesseDeplacement;
 
@@ -37,16 +38,22 @@ public class DeplacementPerso : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            
             rb.velocity = new Vector3(vitesseHorizontal, 0, vitesseVertical).normalized * 20;
             court = true;
         }
         else
         {
-            //gameObject.GetComponent<Rigidbody>().velocity
-            //rb.AddForce(new Vector3(0, -300, 0));
             rb.velocity = new Vector3(vitesseHorizontal, 0, vitesseVertical).normalized * 10;
             court = false;
+        }
+
+        if (((rb.velocity.x <= 0 && gameObject.transform.forward.x <= 0) || (rb.velocity.x >= 0 && gameObject.transform.forward.x >= 0)) && ((rb.velocity.z <= 0 && gameObject.transform.forward.z <= 0) || (rb.velocity.z >= 0 && gameObject.transform.forward.z >= 0)))
+        {
+            reculons = false;
+        }
+        else if (((rb.velocity.x >= 0 && gameObject.transform.forward.x <= 0) || (rb.velocity.x <= 0 && gameObject.transform.forward.x >= 0)) || ((rb.velocity.z >= 0 && gameObject.transform.forward.z <= 0) || (rb.velocity.z <= 0 && gameObject.transform.forward.z >= 0)))
+        {
+            reculons = true;
         }
 
         if (rb.velocity.magnitude > 0 && !court)
@@ -54,16 +61,19 @@ public class DeplacementPerso : MonoBehaviour
             //gameObject.GetComponent<Animator>().setBool(...);
             anim.SetBool("Marche", true);
             anim.SetBool("Court", false);
+            anim.SetBool("Recule", reculons);
         }
         else if (rb.velocity.magnitude > 0 && court)
         {
             anim.SetBool("Marche", false);
             anim.SetBool("Court", true);
+            anim.SetBool("Recule", reculons);
         }
         else //if(rb.velocity.magnitude == 0)
         {
             anim.SetBool("Marche", false);
             anim.SetBool("Court", false);
+            anim.SetBool("Recule", reculons);
         }
 
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);

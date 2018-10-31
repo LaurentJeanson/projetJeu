@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65e6372a16e8984ca6135f5ca5d85a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &548118841
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +489,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 1d1cd3e31c6e4ace59bb93664c9ae463723d0cbd
 --- !u!1 &599604867
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +919,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175950109}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &1339057048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1033,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 1d1cd3e31c6e4ace59bb93664c9ae463723d0cbd
 --- !u!1 &1422235077
 GameObject:
   m_ObjectHideFlags: 0

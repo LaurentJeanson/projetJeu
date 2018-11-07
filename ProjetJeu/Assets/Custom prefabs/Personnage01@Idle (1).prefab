@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 54151253361920906}
   - component: {fileID: 136505341124840002}
   - component: {fileID: 114185883149704828}
+  - component: {fileID: 135872484984990378}
   m_Layer: 0
   m_Name: Personnage01@Idle (1)
   m_TagString: Untagged
@@ -943,7 +944,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066850010942312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 255, y: 10, z: 138.1}
+  m_LocalPosition: {x: 255, y: 9.97, z: 138.1}
   m_LocalScale: {x: 13.333262, y: 13.333262, z: 13.333262}
   m_Children:
   - {fileID: 4782817182498078}
@@ -1169,6 +1170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitesseDeplacement: 20
+--- !u!135 &135872484984990378
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066850010942312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136505341124840002
 CapsuleCollider:
   m_ObjectHideFlags: 1

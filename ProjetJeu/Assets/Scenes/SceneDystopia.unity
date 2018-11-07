@@ -1911,6 +1911,16 @@ Prefab:
       propertyPath: spawn6
       value: 
       objectReference: {fileID: 1856313647}
+    - target: {fileID: 114949355707179574, guid: 686a91832ee1bb840bbfaa1b4faf697a,
+        type: 2}
+      propertyPath: nbEnnemisTotal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114949355707179574, guid: 686a91832ee1bb840bbfaa1b4faf697a,
+        type: 2}
+      propertyPath: spawnRate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 686a91832ee1bb840bbfaa1b4faf697a, type: 2}
   m_IsPrefabAsset: 0
@@ -6144,6 +6154,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1066850010942312, guid: b9fa87e814a83d141adb88cf7c5450ac,
     type: 2}
   m_PrefabInternal: {fileID: 209209133}
+--- !u!114 &504141692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 504141691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ec526e539dbb748a60bc4307577bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &507995110
 Prefab:
   m_ObjectHideFlags: 0
@@ -12481,10 +12502,6 @@ Prefab:
       propertyPath: laCible
       value: 
       objectReference: {fileID: 504141691}
-    - target: {fileID: 1802923686627018, guid: 1ec87d702ec1ee64b8fb9f88eb1c22b3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec87d702ec1ee64b8fb9f88eb1c22b3, type: 2}
   m_IsPrefabAsset: 0

@@ -9,6 +9,8 @@ public class Ennemis : MonoBehaviour {
     NavMeshAgent navAgent;
     Animator ennemiAnim;
 
+    public static bool touchePerso = false;
+
 	// Use this for initialization
 	void Start () {
         navAgent = GetComponent<NavMeshAgent>();
@@ -19,8 +21,11 @@ public class Ennemis : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         navAgent.SetDestination(laCible.transform.position);
-        print(navAgent.velocity.magnitude);
         ennemiAnim.SetFloat("vitesse", navAgent.velocity.magnitude);
-		
+
+        if (touchePerso)
+        {
+            ennemiAnim.SetBool("touchePerso", true);
+        }
 	}
 }

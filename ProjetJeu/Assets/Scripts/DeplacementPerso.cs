@@ -33,8 +33,6 @@ public class DeplacementPerso : MonoBehaviour
         float vitesseHorizontal = -deplacementVertical * vitesseDeplacement;
         float vitesseVertical = deplacementHorizontal * vitesseDeplacement;
 
-        //print(rb.velocity.y);
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             

@@ -78,11 +78,11 @@ GameObject:
   - component: {fileID: 114787358239218868}
   m_Layer: 0
   m_Name: Ennemis_BleuMarche
-  m_TagString: Untagged
+  m_TagString: ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4016617518840102
 Transform:
   m_ObjectHideFlags: 1

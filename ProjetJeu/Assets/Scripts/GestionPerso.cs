@@ -21,4 +21,12 @@ public class GestionPerso : MonoBehaviour {
             Ennemis.touchePerso = true;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "ennemi")
+        {
+            Ennemis.touchePerso = false;
+        }
+    }
 }

@@ -23,9 +23,6 @@ public class Ennemis : MonoBehaviour {
         navAgent.SetDestination(laCible.transform.position);
         ennemiAnim.SetFloat("vitesse", navAgent.velocity.magnitude);
 
-        if (touchePerso)
-        {
-            ennemiAnim.SetBool("touchePerso", true);
-        }
+        ennemiAnim.SetBool("touchePerso", touchePerso);
 	}
 }

@@ -9,6 +9,7 @@ public class GestionEventCine : MonoBehaviour {
 	public GameObject CameraPerso;
 	public GameObject Personnage;
 	public GameObject FauxPersonnage;
+	public GameObject GestionEventGameObject;
 	// Use this for initialization
 	void Start () {
 		
@@ -24,10 +25,12 @@ public class GestionEventCine : MonoBehaviour {
 		print (Time.time);
 		CameraEvent1.SetActive (false);
 		CameraEvent2.SetActive (true);
+		Destroy (CameraEvent1);
 		yield return new WaitForSeconds (3);
 		print (Time.time);
 		CameraEvent2.SetActive (false);
 		CameraEvent3.SetActive (true);
+		Destroy (CameraEvent2);
 		yield return new WaitForSeconds (4);
 		print (Time.time);
 		CameraEvent3.SetActive (false);
@@ -35,5 +38,6 @@ public class GestionEventCine : MonoBehaviour {
 		Personnage.SetActive (true);
 		CameraPerso.SetActive (true);
 		Destroy (CameraEvent3);
+		Destroy (GestionEventGameObject);
 	}
 }

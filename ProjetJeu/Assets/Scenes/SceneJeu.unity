@@ -32487,7 +32487,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marcher jusqu'\xE0 l'h\xF4pital abandonn\xE9e pour retrouver votre chien."
+  m_Text: "Marchez jusqu'\xE0 l'h\xF4pital abandonn\xE9 pour \nretrouver votre chien."
 --- !u!222 &2049037774
 CanvasRenderer:
   m_ObjectHideFlags: 0

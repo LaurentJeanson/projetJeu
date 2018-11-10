@@ -34,5 +34,6 @@ public class GestionEventCine : MonoBehaviour {
 		FauxPersonnage.SetActive (false);
 		Personnage.SetActive (true);
 		CameraPerso.SetActive (true);
+		Destroy (CameraEvent3);
 	}
 }

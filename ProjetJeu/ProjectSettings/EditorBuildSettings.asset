@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneJeu.unity
     guid: ba34b1c405f7d954dab190c9c02e81dc
+  - enabled: 1
+    path: Assets/Scenes/InterieurHopital.unity
+    guid: 285d028244bb5f746b8a824f36a859ea
   m_configObjects: {}

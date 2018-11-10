@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EntreeFaille : MonoBehaviour {
 
@@ -23,6 +24,13 @@ public class EntreeFaille : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             cam.GetComponent<Animation>().Play();
+            StartCoroutine("LoadScene");
         }
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(2.3f);
+        SceneManager.LoadScene(5);
     }
 }

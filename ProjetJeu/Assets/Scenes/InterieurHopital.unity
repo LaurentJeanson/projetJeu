@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cab27a87d4eadb44b0d6bf0f0940254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1564939187}
 --- !u!65 &319829516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -990,6 +990,10 @@ Prefab:
     - target: {fileID: 1583642501159784, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583642501159784, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
@@ -6606,6 +6610,20 @@ Prefab:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114388117533537376, guid: b9fa87e814a83d141adb88cf7c5450ac,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164558223631068, guid: b9fa87e814a83d141adb88cf7c5450ac,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583642501159784, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa87e814a83d141adb88cf7c5450ac, type: 2}
   m_IsPrefabAsset: 0
@@ -7576,6 +7594,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1811613432699954, guid: c765babaab41bda41bb0bcee8148f9b7,
     type: 2}
   m_PrefabInternal: {fileID: 1451485993}
+--- !u!20 &1564939187 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20050164617670068, guid: c765babaab41bda41bb0bcee8148f9b7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1451485993}
+--- !u!111 &1564939189
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1564939184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e1c94384cc14d18479aa6f49acff12ac, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e1c94384cc14d18479aa6f49acff12ac, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1606029084
 GameObject:
   m_ObjectHideFlags: 0

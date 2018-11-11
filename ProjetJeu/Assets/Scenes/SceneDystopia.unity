@@ -1700,7 +1700,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnMarais
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3137,14 +3137,14 @@ RectTransform:
   m_GameObject: {fileID: 252801325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.279, y: 3.279, z: 3.279}
+  m_LocalScale: {x: 2.1206932, y: 2.1206932, z: 2.1206932}
   m_Children: []
   m_Father: {fileID: 975976622}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166, y: -168}
+  m_AnchoredPosition: {x: -141.41003, y: -137.34998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &252801327
@@ -5747,14 +5747,14 @@ RectTransform:
   m_GameObject: {fileID: 438405085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5460398, y: 2.5460398, z: 2.5460398}
+  m_LocalScale: {x: 1.6466511, y: 1.6466511, z: 1.6466511}
   m_Children: []
   m_Father: {fileID: 975976622}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -165, y: -166}
+  m_AnchoredPosition: {x: -140.76004, y: -136.05998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &438405087
@@ -7425,7 +7425,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnSatellite
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9367,7 +9367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &712598726
 Transform:
   m_ObjectHideFlags: 0
@@ -13489,7 +13489,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnCimetiere
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -16075,7 +16075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1179657460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21426,7 +21426,7 @@ RectTransform:
   m_GameObject: {fileID: 1618425414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.442089, y: 2.442089, z: 2.442089}
+  m_LocalScale: {x: 1.579421, y: 1.579421, z: 1.579421}
   m_Children:
   - {fileID: 946431825}
   m_Father: {fileID: 975976622}
@@ -21434,7 +21434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -170, y: -169}
+  m_AnchoredPosition: {x: -144, y: -138}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618425416
@@ -22965,7 +22965,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPlage
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24893,7 +24893,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnFontaine
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -27679,7 +27679,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnVillage
   m_TagString: Respawn
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

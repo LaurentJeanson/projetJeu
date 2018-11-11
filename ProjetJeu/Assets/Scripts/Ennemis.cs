@@ -10,6 +10,8 @@ public class Ennemis : MonoBehaviour {
     Animator ennemiAnim;
 
     public static bool touchePerso = false;
+    public static float degatEnnemi = 0.1f;
+    public static float vitesseAttaque = 2;
 
 	// Use this for initialization
 	void Start () {

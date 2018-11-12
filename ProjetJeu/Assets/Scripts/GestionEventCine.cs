@@ -10,6 +10,8 @@ public class GestionEventCine : MonoBehaviour {
 	public GameObject Personnage;
 	public GameObject FauxPersonnage;
 	public GameObject GestionEventGameObject;
+	public GameObject Text;
+	public GameObject Panel;
 	// Use this for initialization
 	void Start () {
 		
@@ -29,6 +31,8 @@ public class GestionEventCine : MonoBehaviour {
 		print (Time.time);
 		CameraEvent2.SetActive (false);
 		CameraEvent3.SetActive (true);
+		Text.SetActive (false);
+		Panel.SetActive (false);
 		yield return new WaitForSeconds (4);
 		print (Time.time);
 		CameraEvent3.SetActive (false);

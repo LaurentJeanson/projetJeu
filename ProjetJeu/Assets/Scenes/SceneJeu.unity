@@ -16688,7 +16688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cible: {fileID: 347617526}
-  Distance: {x: 0, y: 140, z: 0}
+  Distance: {x: 0, y: 200, z: 0}
 --- !u!1001 &1173400852
 Prefab:
   m_ObjectHideFlags: 0

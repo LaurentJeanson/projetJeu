@@ -10,7 +10,8 @@ public class GestionPerso : MonoBehaviour {
 
     public Image viePerso;
 
-    private bool peutTirer;
+    public static bool peutTirer = true;
+    private bool estDansZone;
 
 	// Use this for initialization
 	void Start ()
@@ -35,10 +36,10 @@ public class GestionPerso : MonoBehaviour {
                 gameObject.GetComponent<LineRenderer>().SetPosition(0, gameObject.transform.position + new Vector3(0, 3, 0));
                 gameObject.GetComponent<LineRenderer>().SetPosition(1, infoCollisionTir.point);
 
+
                 if (infoCollisionTir.collider.gameObject.tag == "ennemi")
                 {
-                    print("BANG");
-                    //infoCollisionTir.collider.gameObject.GetComponent<Ennemis>().Touche();
+                    infoCollisionTir.collider.gameObject.GetComponent<Ennemis>().Touche();
                 }
             }
         }
@@ -46,8 +47,9 @@ public class GestionPerso : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ennemi")
+        if (other.gameObject.tag == "ennemi" && estDansZone == false)
         {
+            estDansZone = true;
             Ennemis.touchePerso = true;
             InvokeRepeating("AttaquePerso", 0, Ennemis.vitesseAttaque);
         }
@@ -57,7 +59,9 @@ public class GestionPerso : MonoBehaviour {
     {
         if (other.gameObject.tag == "ennemi")
         {
+            estDansZone = false;
             Ennemis.touchePerso = false;
+            CancelInvoke("AttaquePerso");
         }
     }
 

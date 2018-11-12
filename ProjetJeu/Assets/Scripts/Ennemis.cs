@@ -27,4 +27,9 @@ public class Ennemis : MonoBehaviour {
 
         ennemiAnim.SetBool("touchePerso", touchePerso);
 	}
+
+    public void Touche()
+    {
+        Destroy(gameObject);
+    }
 }

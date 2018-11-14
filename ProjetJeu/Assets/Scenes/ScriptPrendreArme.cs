@@ -8,6 +8,8 @@ public class ScriptPrendreArme : MonoBehaviour {
     public GameObject particules;
     public GameObject texte;
     public GameObject panel;
+    public GameObject texte2;
+    public GameObject panel2;
     // Use this for initialization
     void Start () {
 		
@@ -26,6 +28,8 @@ public class ScriptPrendreArme : MonoBehaviour {
             FusilPerso.SetActive(true);
             texte.SetActive(false);
             panel.SetActive(false);
+            texte2.SetActive(true);
+            panel2.SetActive(true);
         }
     }
 }

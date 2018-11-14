@@ -7,6 +7,8 @@ public class CamScriptHopitDysto : MonoBehaviour {
 	public GameObject CameraPerso;
     public GameObject texte;
     public GameObject panel;
+    public GameObject textePerso;
+    public GameObject panelTextPerso;
     //public GameObject Perso;
     //public GameObject FauxPerso;
     public GameObject EventHopitalDysto;
@@ -21,7 +23,10 @@ public class CamScriptHopitDysto : MonoBehaviour {
 	}
 	IEnumerator CineEventHopitalDysto(){
 		print (Time.time);
-		yield return new WaitForSeconds (20);
+        yield return new WaitForSeconds(5);
+        textePerso.SetActive(false);
+        panelTextPerso.SetActive(false);
+        yield return new WaitForSeconds (15);
 		print (Time.time);
 		CameraEvent.SetActive (false);
 		//FauxPerso.SetActive (false);

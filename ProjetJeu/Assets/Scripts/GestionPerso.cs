@@ -8,7 +8,10 @@ public class GestionPerso : MonoBehaviour {
     public float vieTotale;
     private float vieActuelle;
 
+    public float vitesseTir;
+
     public Image viePerso;
+    public GameObject particuleTir;
 
     public static bool peutTirer = true;
     private bool estDansZone;
@@ -24,26 +27,15 @@ public class GestionPerso : MonoBehaviour {
     {
         viePerso.fillAmount = vieActuelle / vieTotale;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && peutTirer)
         {
+            var clone = Instantiate(particuleTir);
+            clone.transform.position = transform.position + new Vector3(0, 0.5f, 0);
+            clone.transform.localEulerAngles = transform.localEulerAngles;
+            clone.SetActive(true);
             peutTirer = false;
-
-            RaycastHit infoCollisionTir;
-
-            if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out infoCollisionTir, 5000))
-            {
-                gameObject.GetComponent<LineRenderer>().enabled = true;
-                gameObject.GetComponent<LineRenderer>().SetPosition(0, gameObject.transform.position + new Vector3(0, 3, 0));
-                gameObject.GetComponent<LineRenderer>().SetPosition(1, infoCollisionTir.point);
-
-
-                if (infoCollisionTir.collider.gameObject.tag == "ennemi")
-                {
-                    infoCollisionTir.collider.gameObject.GetComponent<Ennemis>().Touche();
-                }
-
-                Invoke("EnleverLigne", 0.1f);
-            }
+            StartCoroutine("AttenteTir");
+            StartCoroutine(DetruireParticule(clone));
         }
     }
 
@@ -76,8 +68,15 @@ public class GestionPerso : MonoBehaviour {
         }
     }
 
-    void EnleverLigne()
+    IEnumerator AttenteTir()
     {
-        gameObject.GetComponent<LineRenderer>().enabled = false;
+        yield return new WaitForSeconds(vitesseTir);
+        peutTirer = true;
+    }
+
+    IEnumerator DetruireParticule(GameObject particule)
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(particule);
     }
 }

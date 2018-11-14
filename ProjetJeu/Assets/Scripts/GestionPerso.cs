@@ -41,6 +41,8 @@ public class GestionPerso : MonoBehaviour {
                 {
                     infoCollisionTir.collider.gameObject.GetComponent<Ennemis>().Touche();
                 }
+
+                Invoke("EnleverLigne", 0.1f);
             }
         }
     }
@@ -72,5 +74,10 @@ public class GestionPerso : MonoBehaviour {
         {
             CancelInvoke("AttaquePerso");
         }
+    }
+
+    void EnleverLigne()
+    {
+        gameObject.GetComponent<LineRenderer>().enabled = false;
     }
 }

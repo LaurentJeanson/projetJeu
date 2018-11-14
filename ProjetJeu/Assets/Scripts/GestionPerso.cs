@@ -12,26 +12,32 @@ public class GestionPerso : MonoBehaviour {
 
     public Image viePerso;
     public GameObject particuleTir;
+    public GameObject fusil;
 
     public static bool peutTirer = true;
     private bool estDansZone;
 
-	// Use this for initialization
-	void Start ()
+    private Animator anim;
+
+    // Use this for initialization
+    void Start ()
     {
         vieActuelle = vieTotale;
-	}
+        anim = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
         viePerso.fillAmount = vieActuelle / vieTotale;
 
+
         if (Input.GetMouseButtonDown(0) && peutTirer)
         {
             var clone = Instantiate(particuleTir);
-            clone.transform.position = transform.position + new Vector3(0, 0.5f, 0);
+            clone.transform.position = fusil.transform.position;
             clone.transform.localEulerAngles = transform.localEulerAngles;
+            anim.SetBool("Tir", true);
             clone.SetActive(true);
             peutTirer = false;
             StartCoroutine("AttenteTir");

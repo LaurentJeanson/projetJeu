@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/interfaceDefaite.unity
     guid: 1acfaddac9efcd54995b14e1a9912a73
+  - enabled: 1
+    path: Assets/Scenes/SceneCinematiqueDebut.unity
+    guid: 7e172ba546bc77742af557a29ce91693
   m_configObjects: {}

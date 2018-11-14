@@ -40,4 +40,9 @@ public class ChangementSceneMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("menuPrincipal");
     }
+
+    public void AllerCinématique()
+    {
+        SceneManager.LoadScene("SceneCinematiqueDebut");
+    }
 }

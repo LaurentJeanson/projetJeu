@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+/**************************************************/
+/**Dernière modification : 2018-11-14 *************/
+/**************************************************/
+/**Fait par Nejma Hamadi***************************/
+/**************************************************/
 
 public class ScriptChangementSceneCinematiqueAJeu : MonoBehaviour {
 

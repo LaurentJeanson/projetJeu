@@ -5,9 +5,11 @@ using UnityEngine;
 public class CamScriptHopitDysto : MonoBehaviour {
 	public GameObject CameraEvent;
 	public GameObject CameraPerso;
-	//public GameObject Perso;
-	//public GameObject FauxPerso;
-	public GameObject EventHopitalDysto;
+    public GameObject texte;
+    public GameObject panel;
+    //public GameObject Perso;
+    //public GameObject FauxPerso;
+    public GameObject EventHopitalDysto;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +27,8 @@ public class CamScriptHopitDysto : MonoBehaviour {
 		//FauxPerso.SetActive (false);
 		//Perso.SetActive (true);
 		CameraPerso.SetActive (true);
-		Destroy (EventHopitalDysto);
+        texte.SetActive(true);
+        panel.SetActive(true);
+        Destroy (EventHopitalDysto);
 	}
 }

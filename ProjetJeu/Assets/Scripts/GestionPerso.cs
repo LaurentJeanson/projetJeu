@@ -29,19 +29,22 @@ public class GestionPerso : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        viePerso.fillAmount = vieActuelle / vieTotale;
-
-
-        if (Input.GetMouseButtonDown(0) && peutTirer)
+        if (!DeplacementPerso.estMort)
         {
-            var clone = Instantiate(particuleTir);
-            clone.transform.position = fusil.transform.position;
-            clone.transform.localEulerAngles = transform.localEulerAngles;
-            anim.SetBool("Tir", true);
-            clone.SetActive(true);
-            peutTirer = false;
-            StartCoroutine("AttenteTir");
-            StartCoroutine(DetruireParticule(clone));
+            viePerso.fillAmount = vieActuelle / vieTotale;
+
+
+            if (Input.GetMouseButtonDown(0) && peutTirer)
+            {
+                var clone = Instantiate(particuleTir);
+                clone.transform.position = fusil.transform.position;
+                clone.transform.localEulerAngles = transform.localEulerAngles;
+                anim.SetBool("Tir", true);
+                clone.SetActive(true);
+                peutTirer = false;
+                StartCoroutine("AttenteTir");
+                StartCoroutine(DetruireParticule(clone));
+            }
         }
     }
 
@@ -68,6 +71,10 @@ public class GestionPerso : MonoBehaviour {
     void AttaquePerso()
     {
         vieActuelle -= Ennemis.degatEnnemi;
+        if (vieActuelle <= 0)
+        {
+            DeplacementPerso.estMort = true;
+        }
         if (!Ennemis.touchePerso)
         {
             CancelInvoke("AttaquePerso");

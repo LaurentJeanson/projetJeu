@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Scripte créé par Laurent Jeanson
+
 public class GestionArmeEvenrt : MonoBehaviour {
     public GameObject Texte;
     public GameObject Panel;
@@ -13,6 +15,8 @@ public class GestionArmeEvenrt : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	// Lorsque le joueur appuie sur ENTER, les textes du tutoriel se désactive
+	// et d'autre textes apparaient pour montrer un autre tutoriel sur la gestion de vie
 	void Update () {
         if (Input.GetKey(KeyCode.Return))
         {
@@ -23,6 +27,9 @@ public class GestionArmeEvenrt : MonoBehaviour {
             StartCoroutine(Cerveautexte());
         }
     }
+
+	//Le nombre de temps que le tutoriel de la vie va durée est de 10 secondes 
+
     IEnumerator Cerveautexte()
     {
         print(Time.time);

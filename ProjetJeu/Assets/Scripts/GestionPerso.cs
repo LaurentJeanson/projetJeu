@@ -22,6 +22,10 @@ public class GestionPerso : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        if (PlayerPrefs.HasKey("peutTirer"))
+        {
+            //peutTirer = PlayerPrefs.Get
+        }
         vieActuelle = vieTotale;
         anim = GetComponent<Animator>();
     }

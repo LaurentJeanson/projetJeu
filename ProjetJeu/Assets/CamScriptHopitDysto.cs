@@ -9,8 +9,12 @@ public class CamScriptHopitDysto : MonoBehaviour {
     public GameObject panel;
     public GameObject textePerso;
     public GameObject panelTextPerso;
-    //public GameObject Perso;
-    //public GameObject FauxPerso;
+    public GameObject imageCerveauVide;
+    public GameObject imageCerveauPlein;
+    public GameObject contourMiniMap;
+    public GameObject miniMap;
+    public GameObject maskMiniMap;
+    public GameObject Perso;
     public GameObject EventHopitalDysto;
 	// Use this for initialization
 	void Start () {
@@ -22,7 +26,6 @@ public class CamScriptHopitDysto : MonoBehaviour {
 		StartCoroutine(CineEventHopitalDysto ());
 	}
 	IEnumerator CineEventHopitalDysto(){
-		print (Time.time);
         yield return new WaitForSeconds(5);
         textePerso.SetActive(false);
         panelTextPerso.SetActive(false);
@@ -34,6 +37,12 @@ public class CamScriptHopitDysto : MonoBehaviour {
 		CameraPerso.SetActive (true);
         texte.SetActive(true);
         panel.SetActive(true);
+        maskMiniMap.SetActive(true);
+        miniMap.SetActive(true);
+        contourMiniMap.SetActive(true);
+        imageCerveauPlein.SetActive(true);
+        imageCerveauVide.SetActive(true);
+        Perso.SetActive(false);
         Destroy (EventHopitalDysto);
 	}
 }

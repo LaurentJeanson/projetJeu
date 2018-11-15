@@ -10,6 +10,8 @@ public class ScriptPrendreArme : MonoBehaviour {
     public GameObject panel;
     public GameObject texte2;
     public GameObject panel2;
+    public GameObject ennemi;
+    public GameObject spawnEnnemi;
     // Use this for initialization
     void Start () {
 		
@@ -30,6 +32,12 @@ public class ScriptPrendreArme : MonoBehaviour {
             panel.SetActive(false);
             texte2.SetActive(true);
             panel2.SetActive(true);
+
+            var clone = Instantiate(ennemi);
+            clone.transform.position = spawnEnnemi.transform.position;
+            clone.SetActive(true);
+            print(ennemi.transform.position);
+            print(spawnEnnemi.transform.position);
         }
     }
 }

@@ -25,6 +25,6 @@ public class ScriptChangementSceneCinematiqueAJeu : MonoBehaviour {
 
     public void allerCinematiqueAJeu(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadScene("menuPrincipal");
+        SceneManager.LoadScene("SceneJeu");
     }
 }

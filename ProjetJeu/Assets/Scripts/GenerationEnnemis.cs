@@ -27,15 +27,19 @@ public class GenerationEnnemis : MonoBehaviour
 
     //Nombres pour déterminer le nombre d'ennemis total ainsi que la vitesse à laquelle ils sont créés
     public int nbEnnemisTotal;
-    public int spawnRate;
+    public int spawnRate = 1;
 
     //Nombre d'ennemis créé
     private int nbEnnemis = 0;
+
+    public static int iNoVague = 0;
+    public int iNbEnnemisMorts;
 
 
     // Use this for initialization
     void Start()
     {
+        iNoVague++;
         //Instantier des ennemis
         InvokeRepeating("CreationEnnemiSpawn", 1, spawnRate);
     }
@@ -114,5 +118,12 @@ public class GenerationEnnemis : MonoBehaviour
         {
             CancelInvoke("CreationEnnemiSpawn");
         }
+    }
+
+    public void ProchaineVague(int nbEnnemisACreer)
+    {
+        nbEnnemis = 0;
+        nbEnnemisTotal = nbEnnemisACreer;
+        InvokeRepeating("CreationEnnemiSpawn", 1, spawnRate);
     }
 }

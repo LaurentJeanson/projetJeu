@@ -128,4 +128,9 @@ public class GestionPerso : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(particule);
     }
+
+    public void StopInvoke()
+    {
+        CancelInvoke("AttaquePerso");
+    }
 }

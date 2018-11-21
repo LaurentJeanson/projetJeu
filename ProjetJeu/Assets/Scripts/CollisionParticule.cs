@@ -44,21 +44,15 @@ public class CollisionParticule : MonoBehaviour {
         clone.transform.position = pos;
         clone.SetActive(true);
 
-        //Détruire la particule de contact et celle de la balle
-        StartCoroutine(DetruireParticule(clone));
+        //Détruire la particule de la balle
         Destroy(gameObject);
 
-        //Si l'objet touché était un ennemi, le détruire aussi
+        //Si l'objet touché était un ennemi, le détruire aussi et arrêter son attaque
         if (other.gameObject.tag == "ennemi")
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<GestionPerso>().StopInvoke();
             other.gameObject.GetComponent<Ennemis>().Touche();
         }
-    }
-
-    //Détruire la particule de collision après 1 seconde
-    IEnumerator DetruireParticule(GameObject particule)
-    {
-        yield return new WaitForSeconds(1);
-        Destroy(particule);
     }
 }

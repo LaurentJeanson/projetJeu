@@ -1,7 +1,7 @@
 ﻿/////////////////////////////////////
 //Nejma Hamadi//////////////////////
 ////////////////////////////////////
-//Dernière modification : 2018-10-10
+//Dernière modification : 2018-11-14
 ////////////////////////////////////
 using System.Collections;
 using System.Collections.Generic;
@@ -41,7 +41,7 @@ public class ChangementSceneMenu : MonoBehaviour {
         SceneManager.LoadScene("menuPrincipal");
     }
 
-    public void AllerCinématique()
+    public void AllerCinematique()
     {
         SceneManager.LoadScene("SceneCinematiqueDebut");
     }

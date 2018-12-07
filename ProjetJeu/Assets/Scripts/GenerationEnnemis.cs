@@ -15,7 +15,10 @@ public class GenerationEnnemis : MonoBehaviour
     public GameObject EnnemiMauve;
     public GameObject EnnemiOrange;
     public GameObject EnnemiRouge;
-    public GameObject EnnemiVert;
+
+    public GameObject ChampiBleu;
+    public GameObject ChampiRouge;
+    public GameObject ChampiVert;
 
     //Game objects pour stocker les points d'apparition des ennemis
     public GameObject spawn1;
@@ -26,11 +29,17 @@ public class GenerationEnnemis : MonoBehaviour
     public GameObject spawn6;
 
     //Nombres pour déterminer le nombre d'ennemis total ainsi que la vitesse à laquelle ils sont créés
-    public int nbEnnemisTotal;
+    public int nbEnnemisMax;
     public int spawnRate = 1;
 
     //Nombre d'ennemis créé
-    private int nbEnnemis = 0;
+    private int nbEnnemisRange = 0;
+    private int nbEnnemisProche = 0;
+    private int nbEnnemisRangeTotal = 0;
+    private int nbEnnemisProcheTotal = 0;
+    public int nbEnnemisTotal;
+
+    private int randEnnemi;
 
     public static int iNoVague = 0;
     public int iNbEnnemisMorts;
@@ -40,6 +49,8 @@ public class GenerationEnnemis : MonoBehaviour
     void Start()
     {
         iNoVague++;
+        SetVieEnnemiProche(2);
+        SetVieEnnemiRange(1);
         //Instantier des ennemis
         InvokeRepeating("CreationEnnemiSpawn", 1, spawnRate);
     }
@@ -47,41 +58,88 @@ public class GenerationEnnemis : MonoBehaviour
     //Créer des ennemis
     void CreationEnnemiSpawn()
     {
-        //Si le nombre maximal d'ennemis n'est pas atteint
-        if (nbEnnemis < nbEnnemisTotal)
-        {
-            //Créer un ennemi
-            var ennemi = EnnemiBleu;
-            //Calculer des chiffres aléatoires et une taille aléatoire
-            int i = Random.Range(1, 7);
-            int j = Random.Range(1, 7);
-            int scale = Random.Range(1, 3);
+        var ennemi = "";
+        nbEnnemisRangeTotal = nbEnnemisMax * 2 / 5;
+        nbEnnemisProcheTotal = nbEnnemisMax - nbEnnemisRangeTotal;
 
-            //Selon le premier chiffre aléatoire, on créé un ennemi d'une certaine couleur
-            switch (i)
+        if (nbEnnemisRange < nbEnnemisRangeTotal && nbEnnemisProche < nbEnnemisProcheTotal)
+        {
+            randEnnemi = Random.Range(1, 3);
+
+            switch (randEnnemi)
             {
                 case 1:
                 default:
-                    ennemi = EnnemiBleu;
+                    ennemi = "ennemiRange";
                     break;
                 case 2:
-                    ennemi = EnnemiJaune;
-                    break;
-                case 3:
-                    ennemi = EnnemiMauve;
-                    break;
-                case 4:
-                    ennemi = EnnemiOrange;
-                    break;
-                case 5:
-                    ennemi = EnnemiRouge;
-                    break;
-                case 6:
-                    ennemi = EnnemiVert;
+                    ennemi = "ennemiProche";
                     break;
             }
+        }
+        else if (nbEnnemisRange >= nbEnnemisRangeTotal && nbEnnemisProche < nbEnnemisProcheTotal)
+        {
+            ennemi = "ennemiProche";
+        }
+        else if (nbEnnemisRange < nbEnnemisRangeTotal && nbEnnemisProche >= nbEnnemisProcheTotal)
+        {
+            ennemi = "ennemiRange";
+        }
 
-            var clone = Instantiate(ennemi);
+        //Si le nombre maximal d'ennemis n'est pas atteint
+        if (nbEnnemisTotal < nbEnnemisMax)
+        {
+            var ennemiCree = EnnemiOrange;
+
+            int i = Random.Range(1, 6);
+            int j = Random.Range(1, 7);
+            int k = Random.Range(1, 4);
+
+            if (ennemi == "ennemiProche")
+            {
+                //Selon le premier chiffre aléatoire, on créé un ennemi d'une certaine couleur
+                switch (i)
+                {
+                    case 1:
+                    default:
+                        ennemiCree = EnnemiBleu;
+                        break;
+                    case 2:
+                        ennemiCree = EnnemiJaune;
+                        break;
+                    case 3:
+                        ennemiCree = EnnemiMauve;
+                        break;
+                    case 4:
+                        ennemiCree = EnnemiOrange;
+                        break;
+                    case 5:
+                        ennemiCree = EnnemiRouge;
+                        break;
+                }
+                nbEnnemisProche++;
+            }
+            else if (ennemi == "ennemiRange")
+            {
+
+                //Selon le premier chiffre aléatoire, on créé un ennemi d'une certaine couleur
+                switch (k)
+                {
+                    case 1:
+                    default:
+                        ennemiCree = ChampiBleu;
+                        break;
+                    case 2:
+                        ennemiCree = ChampiRouge;
+                        break;
+                    case 3:
+                        ennemiCree = ChampiVert;
+                        break;
+                }
+                nbEnnemisRange++;
+            }
+            
+            var clone = Instantiate(ennemiCree);
 
             //Selon le deuxième chiffre aléatoire, on créé l'ennemi à un certain endroit
             switch (j)
@@ -107,11 +165,10 @@ public class GenerationEnnemis : MonoBehaviour
                     break;
             }
             //Selon le troisième chiffre aléatoire, on définit une certaine taille et on active l'ennemi
-            clone.transform.localScale = new Vector3(scale, scale, scale);
             clone.SetActive(true);
 
             //Augmenter le nombre d'ennemis créé
-            nbEnnemis++;
+            nbEnnemisTotal++;
         }
         //Sinon on en créé plus
         else
@@ -120,10 +177,22 @@ public class GenerationEnnemis : MonoBehaviour
         }
     }
 
-    public void ProchaineVague(int nbEnnemisACreer)
+    public void ProchaineVague(int nbEnnemisACreer, int vieEnnemisProche, int vieEnnemisRange)
     {
-        nbEnnemis = 0;
-        nbEnnemisTotal = nbEnnemisACreer;
+        nbEnnemisTotal = 0;
+        nbEnnemisMax = nbEnnemisACreer;
+        SetVieEnnemiProche(vieEnnemisProche);
+        SetVieEnnemiRange(vieEnnemisRange);
         InvokeRepeating("CreationEnnemiSpawn", 1, spawnRate);
+    }
+
+    public static void SetVieEnnemiProche(int vie)
+    {
+        Ennemis.vieEnnemi = vie;
+    }
+
+    public static void SetVieEnnemiRange(int vie)
+    {
+        EnnemiRange.vieEnnemi = vie;
     }
 }

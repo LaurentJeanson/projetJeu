@@ -54,5 +54,11 @@ public class CollisionParticule : MonoBehaviour {
             player.GetComponent<GestionPerso>().StopInvoke();
             other.gameObject.GetComponent<Ennemis>().Touche();
         }
+        else if (other.gameObject.tag == "ennemiRange")
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<GestionPerso>().StopInvoke();
+            other.gameObject.GetComponent<EnnemiRange>().Touche();
+        }
     }
 }

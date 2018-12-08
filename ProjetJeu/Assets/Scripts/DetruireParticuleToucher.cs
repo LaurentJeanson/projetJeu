@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetruireParticuleTouche : MonoBehaviour {
+public class DetruireParticuleToucher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
